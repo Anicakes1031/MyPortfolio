@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
   <link rel="stylesheet" href="styles.css">
+  <script src="pagination.js"></script>
 
   <title>Portfolio</title>
 </head>
@@ -125,20 +126,51 @@
       <h3><i class="fa-solid fa-diagram-project"></i> Projects</h3>
 
       <div class="project-box">
-        <h4>📄 Asset Form</h4>
-        <p>A prototype device that uses sensors and a microcontroller to identify blood types via agglutination detection. Designed for clinics and educational demos.</p>
+        <div class="project-content"> <!-- 👈 Add this wrapper -->
+          <div class="image-slider">
+            <img src="image/finalproj1.jpg" class="project-img" alt="Asset Form Image">
+            <button class="prev-btn">‹</button>
+            <button class="next-btn">›</button>
+          </div>
+          <div class="project-text">
+            <h4>📄 Asset Form</h4>
+            <p>A prototype device that uses sensors and a microcontroller to identify blood types via agglutination detection. Designed for clinics and educational demos.</p>
+          </div>
+        </div>
       </div>
 
       <div class="project-box">
-        <h4>🖥️ Odoo Asset Management Module</h4>
-        <p>Custom Odoo module for internal asset tracking and approval workflow. Includes PDF report generation and admin-user interaction logic.</p>
+        <div class="project-content">
+          <div class="image-slider">
+            <div class="media-container">
+              <img src="image/thesis1.jpg" class="project-img" alt="Odoo Project Image">
+            </div>
+            <button class="prev-btn">‹</button>
+            <button class="next-btn">›</button>
+          </div>
+          <div class="project-text">
+            <h4>🖥️ Odoo Asset Management Module</h4>
+            <p>Custom Odoo module for internal asset tracking and approval workflow. Includes PDF report generation and admin-user interaction logic.</p>
+          </div>
+        </div>
       </div>
 
       <div class="project-box">
-        <h4>🛍️ E-commerce Dashboard (HTML, CSS, JS)</h4>
-        <p>A responsive admin dashboard that visualizes product sales, inventory, and analytics using charts and dynamic filtering.</p>
+        <div class="project-content">
+          <div class="image-slider">
+            <img src="img/dashboard1.png" class="project-img" alt="Dashboard Image">
+            <button class="prev-btn">‹</button>
+            <button class="next-btn">›</button>
+          </div>
+          <div class="project-text">
+            <h4>🛍️ E-commerce Dashboard</h4>
+            <p>A responsive admin dashboard that visualizes product sales, inventory, and analytics using charts and dynamic filtering.</p>
+          </div>
+        </div>
       </div>
+
     </section>
+
 
 
   </main>

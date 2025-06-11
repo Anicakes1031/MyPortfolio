@@ -223,6 +223,11 @@ nav .right a:last-child:hover {
   gap: 8px;
 }
 
+/* PROJECTS SECTION */
+.projects {
+  padding: 2rem;
+}
+
 .project-box {
   background-color: #5f5c5c;
   padding: 20px;
@@ -234,7 +239,7 @@ nav .right a:last-child:hover {
 
 .project-content {
   display: flex;
-  flex-direction: row; /* Make sure it's row, not column */
+  flex-direction: row;
   align-items: flex-start;
   gap: 20px;
 }
@@ -248,15 +253,42 @@ nav .right a:last-child:hover {
   justify-content: center;
 }
 
+/* General project image styles */
 .project-img {
   width: 100%;
+  max-height: 400px;
   object-fit: contain;
   border-radius: 8px;
-  transition: opacity 0.5s ease-in-out;
-  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
 }
+
 .project-img.fade-out {
   opacity: 0;
+}
+
+/* Specific styles for thesis project media container */
+.thesis-project .media-container {
+  width: 100%;
+  height: 400px;
+  position: relative;
+  overflow: hidden;
+}
+
+.thesis-project .media-container video,
+.thesis-project .media-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  position: relative;
+}
+
+/* Regular image slider styles */
+.asset-form-project .image-slider img,
+.activity-project .image-slider img,
+.indos-project .image-slider img {
+  width: 100%;
+  max-height: 400px;
+  object-fit: contain;
 }
 
 .prev-btn,
@@ -268,24 +300,64 @@ nav .right a:last-child:hover {
   border: none;
   color: white;
   font-size: 22px;
-  padding: 5px 5px;
+  padding: 5px 10px;
   cursor: pointer;
   border-radius: 10px;
   z-index: 2;
+  transition: background-color 0.2s;
 }
 
-/* Move buttons outside */
+.prev-btn:hover,
+.next-btn:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
 .prev-btn {
-  left: -19px;
+  left: -25px;
 }
+
 .next-btn {
-  right: -20px;
+  right: -25px;
 }
+
 .project-text {
   flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+.project-text h4 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+.project-text p {
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  .project-content {
+    flex-direction: column;
+  }
+  
+  .image-slider {
+    width: 100%;
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  .project-content {
+    flex-direction: column;
+  }
+  
+  .image-slider {
+    width: 100%;
+  }
 }
 
 

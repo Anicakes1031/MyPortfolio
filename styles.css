@@ -295,14 +295,14 @@ nav .right a:last-child:hover {
 .next-btn {
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
+  transform: translateY(-30%);
   background-color: rgba(0, 0, 0, 0.6);
   border: none;
   color: white;
   font-size: 22px;
   padding: 5px 10px;
   cursor: pointer;
-  border-radius: 10px;
+  border-radius: 100px;
   z-index: 2;
   transition: background-color 0.2s;
 }
@@ -313,11 +313,11 @@ nav .right a:last-child:hover {
 }
 
 .prev-btn {
-  left: -25px;
+  left: 0px;
 }
 
 .next-btn {
-  right: -25px;
+  right: 0px;
 }
 
 .project-text {

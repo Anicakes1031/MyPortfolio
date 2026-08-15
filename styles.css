@@ -235,6 +235,7 @@ nav .right a:last-child:hover {
   margin-bottom: 20px;
   border-radius: 10px;
   color: white;
+  overflow: hidden;
 }
 
 .project-content {
@@ -269,17 +270,23 @@ nav .right a:last-child:hover {
 /* Specific styles for thesis project media container */
 .thesis-project .media-container {
   width: 100%;
-  height: 400px;
+  height: auto;
+  max-height: 420px;
   position: relative;
   overflow: hidden;
+  padding-block: 0;
+  border-radius: 8px;
 }
 
 .thesis-project .media-container video,
 .thesis-project .media-container img {
   width: 100%;
-  height: 100%;
+  height: auto;
+  max-height: 420px;
   object-fit: contain;
   position: relative;
+  display: block;
+  border-radius: 8px;
 }
 
 /* Regular image slider styles */
@@ -322,6 +329,7 @@ nav .right a:last-child:hover {
 
 .project-text {
   flex: 1;
+  min-width: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -333,9 +341,30 @@ nav .right a:last-child:hover {
   font-size: 1.2rem;
 }
 
+.project-text p,
+.project-text li,
+.project-text a,
+.project-text strong {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
 .project-text p {
   margin: 0;
   line-height: 1.5;
+}
+
+.project-text ul {
+  margin-left: 1.25rem;
+  padding-left: 0.5rem;
+}
+
+.project-link {
+  display: inline-block;
+  color: #00ffff;
+  text-decoration: underline;
+  margin-left: 0.75rem;
+  word-break: break-all;
 }
 
 /* Responsive adjustments */
@@ -446,5 +475,80 @@ nav .right a:last-child:hover {
 
   .me .text h2 {
     font-size: 30px;
+  }
+
+  .project-box {
+    padding: 14px 12px;
+  }
+
+  .project-content {
+    gap: 14px;
+  }
+
+  .image-slider {
+    width: 100%;
+  }
+
+  .thesis-project .media-container {
+    height: auto;
+    max-height: 260px;
+    padding-block: 0;
+  }
+
+  .project-text h4 {
+    font-size: 1.05rem;
+  }
+
+  .project-text p,
+  .project-text li,
+  .project-text a,
+  .project-text strong {
+    font-size: 0.92rem;
+    line-height: 1.6;
+  }
+
+  .project-text ul {
+    margin-left: 1rem;
+  }
+
+  .project-link {
+    display: inline;
+    margin-left: 0.4rem;
+  }
+}
+
+@media (max-width: 420px) {
+  .project-box {
+    padding: 12px 10px;
+  }
+
+  .project-content {
+    gap: 10px;
+  }
+
+  .project-text {
+    width: 100%;
+  }
+
+  .project-text h4 {
+    font-size: 1rem;
+  }
+
+  .project-text p,
+  .project-text li,
+  .project-text a,
+  .project-text strong {
+    font-size: 0.85rem;
+  }
+
+  .project-text ul {
+    margin-left: 0.85rem;
+    padding-left: 0.3rem;
+  }
+
+  .project-link {
+    display: block;
+    margin-left: 0;
+    margin-top: 0.35rem;
   }
 }
